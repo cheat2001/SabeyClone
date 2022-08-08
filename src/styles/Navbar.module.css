@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Bayon&family=Roboto+Condensed:wght@300;400;700&display=swap');
+.Navbar{
+    width: 100%;
+    height: 60px;
+    background-color: #FA1939;
+    font-family: 'Bayon', sans-serif;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+    position: relative;
+}
+.Navbar .Link{
+    text-decoration: none;
+    padding: 20px;
+    color: rgba(255, 255, 255, 0.733);
+    font-size: 20px;
+}
+.Navbar .Link:hover{
+     color:white;
+}
+@media (max-width:830px) {
+    .Navbar{
+        background-color: blue;
+        padding-left:5px;
+    }
+}
+.Toggle{
+    width: 40px;
+    height: 40px;
+    border: 1px solid powderblue;
+    position: absolute;
+    right: 10px;
+    border-radius: 5px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.5s;
+    top:10px;
+}
+.Toggle:hover{
+    transition: 0.5s;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.Toggle .Line{
+    width: 30px;
+    height: 5px;
+    background-color: white;
+}
+@media (max-width:690px) {
+    .Navbar{
+        background-color: green;
+    }
+    .Navbar .Link{
+        /* opacity: 0;
+        pointer-events: none; */
+    }
+    .Toggle{
+      opacity: 1;
+    }
+    
+}
