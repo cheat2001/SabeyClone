@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Bayon&family=Roboto+Condensed:wght@300;400;700&display=swap');
+.Container{
+    width: 80%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.096);
+    font-family: 'Bayon', sans-serif;
+    position: relative;
+    margin-top: 100px;
+    padding: 5px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 5px;
+}
+.Container h3{
+    position: absolute;
+    top: -45px;
+    left: 0;
+    padding: 5px 10px;
+    color:rgba(255, 255, 255, 0.87);
+}
