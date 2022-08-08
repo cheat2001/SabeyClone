@@ -1,19 +1,35 @@
 import React from 'react'
 import styles from "../styles/Navbar.module.css";
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import {useState} from "react";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faHome} from "@fortawesome/free-solid-svg-icons";
 function Navbar() {
+  const navLinkStyle = ({ isActive }) => {
+    return {
+      backgroundColor: isActive ? "#c0112c" : "#FA1939",
+      color: isActive ? "white" : "rgba(255, 255, 255, 0.733)",
+    };
+  };
   const [state,setState]=useState(false);
   const toggleMode={
     height:"550px",
     transition:"0.5s",
     flexDirection:"column",
+    justifyContent:"center",
+    alignItems:"center",
   }
-  const showText={
+  const navStyle={
     opacity:"1",
-    pointerEvents: "all",
-    color:"blue",
+    pointerEvents:"all",
+    
   }
+  React.useEffect(() => {
+    function handleResize() {
+    setState(false);
+}
+    window.addEventListener('resize', handleResize)
+  })
   function eventHandler(){
     console.log(state);
     
@@ -21,14 +37,15 @@ function Navbar() {
   }
   return (
     <nav className={styles.Navbar} style={state?toggleMode:{    transition:"0.5s"}}>
-       <div className={styles.NavBarLink}>
-       <Link styles={{color:"red"}}  className={`${styles.Link} ${styles.Home}`} to='/'>ទំព័រដើម</Link>
-      <Link className={styles.Link} to='/entertain'>កម្សាន្ត</Link>
-      <Link className={styles.Link} to='/tech'>បច្ចេកវិទ្យា</Link>
-      <Link className={styles.Link} to='/life'>ជិវិតនិងសង្គម</Link>
-      <Link className={styles.Link} to='/sport'>កីឡា</Link>
-      <Link className={styles.Link} to='/road'>ផ្លូវទៅស្រុក</Link>
-      <Link className={styles.Link} to='nothing'>---</Link>
+       <div style={state?navStyle:{}} className={styles.NavBarLink}>
+       <NavLink  style={navLinkStyle}
+       className={`${styles.Link} ${styles.Home}`} to='/'><FontAwesomeIcon icon={faHome}></FontAwesomeIcon></NavLink>
+      <NavLink style={navLinkStyle} className={styles.Link} to='/entertain'>កម្សាន្ត</NavLink>
+      <NavLink  style={navLinkStyle} className={styles.Link} to='/tech'>បច្ចេកវិទ្យា</NavLink>
+      <NavLink  style={navLinkStyle} className={styles.Link} to='/life'>ជិវិតនិងសង្គម</NavLink>
+      <NavLink  style={navLinkStyle} className={styles.Link} to='/sport'>កីឡា</NavLink>
+      <NavLink  style={navLinkStyle} className={styles.Link} to='/road'>ផ្លូវទៅស្រុក</NavLink>
+      <NavLink  style={navLinkStyle} className={styles.Link} to='nothing'>---</NavLink>
        </div>
       <div  className={`${styles.Toggle}`} onClick={()=>eventHandler()}>
         <div className={`${styles.Line} ${styles.Line1}`}></div>
