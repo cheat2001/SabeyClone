@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from "../styles/Nothing.module.css";
+import gif404 from "../images/404.gif";
 function Nothing() {
   return (
     <div className={styles.Container}>
-        <h1>This Page Can't Found!</h1>
-        <h1>Error! 404</h1>
+        <img width={300} src={gif404} alt="" />
     </div>
   )
 }
