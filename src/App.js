@@ -21,9 +21,16 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/entertain" element={<Entertain/>}/>
         <Route path="/entertain/:id" element={<Document/>}/>
+        <Route path="/entertain/entertain/:id" element={<Document/>}/>
         <Route path="/tech" element={<Tech/>}/>
+        <Route path="/tech/:id" element={<Document/>}/>
+        <Route path="/tech/tech/:id" element={<Document/>}/>
         <Route path="/life" element={<Life/>}/>
+        <Route path="/life/:id" element={<Document/>}/>
+        <Route path="/life/life/:id" element={<Document/>}/>
         <Route path="/sport" element={<Sport/>}/>
+        <Route path="/sport/:id" element={<Document/>}/>
+        <Route path="/sport/sport/:id" element={<Document/>}/>
         <Route path="/road" element={<Road/>}/>
         <Route path="*" element={<Nothing/>}/>
        </Routes>

@@ -1,0 +1,9 @@
+.Container{
+    padding:20px;
+}
+.Container p{
+    font-size: 20px;
+}
+.Container img{
+    max-width: 100%
+}

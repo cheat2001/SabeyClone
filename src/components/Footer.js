@@ -2,7 +2,7 @@ import React from 'react'
 import styles from "../styles/Footer.module.css";
 function Footer() {
   return (
-    <div className={styles.Footer}></div>
+    <div className={styles.Container}></div>
   )
 }
 
