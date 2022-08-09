@@ -16,3 +16,12 @@
 .Container:active{
     transform: scale(0.9);
 }
+@media (max-width: 540px) {
+    .Container{
+        width: 100%;
+        text-align: center;
+    }
+    .Container img{
+        width: 80%;
+    }
+}
